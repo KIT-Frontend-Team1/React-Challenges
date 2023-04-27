@@ -11,14 +11,14 @@ React: 1주차 과제
 
 Team Member
 ===========
-branch - feat/pair1
+branch - pair1
 <br>
 [오혜린](https://github.com/ooherin)
 <br>
 [박세리](https://github.com/seripar)
 <br>
 
-branch - feat/pair2
+branch - pair2
 <br>
 [김예슬](https://github.com/yesoryeseul)
 <br>
