@@ -1,4 +1,4 @@
-![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=61DAFB&text=React-Challenges&height=150&fontSize=60&desc=FRONTEND%20TEAM%201t&descAlignY=85&descAlign=70)
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=61DAFB&text=React-Challenges&height=150&fontSize=60&desc=FRONTEND%20TEAM%201&descAlignY=85&descAlign=68)
 
 # React-Challenges
 Frontend 1st Team
