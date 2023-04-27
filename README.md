@@ -1,4 +1,4 @@
-![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=61DAFB&text=React-Challenges&height=150&fontSize=60&desc=FRONTEND%20TEAM%201t&descAlignY=75&descAlign=60)
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=61DAFB&text=React-Challenges&height=150&fontSize=60&desc=FRONTEND%20TEAM%201t&descAlignY=85&descAlign=60)
 
 # React-Challenges
 Frontend 1st Team
@@ -12,18 +12,17 @@ React: 1주차 과제
 Team Member
 ===========
 branch - feat/pair1
-[오혜린](https://github.com/ooherin)
 <br>
+[오혜린](https://github.com/ooherin)
 <br>
 [박세리](https://github.com/seripar)
 <br>
 <br>
 
 branch - feat/pair2
+<br>
 [김예슬](https://github.com/yesoryeseul)
 <br>
-<br>
 [고승용](https://github.com/seungyonggo)
-<br>
 <br>
 [심재원](https://github.com/GrayHound0801)
