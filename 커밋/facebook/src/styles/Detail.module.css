@@ -1,0 +1,97 @@
+/* 게시물 css */
+body {
+  background-color: #f0f3f5;
+}
+
+.card {
+  width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.1);
+}
+span {
+  font-size: 14px;
+}
+.head {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.head .logo {
+  height: 40px;
+  border-radius: 40px;
+}
+/* 더보기 버튼 */
+.head img:last-child {
+  padding: 10px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  border-radius: 60px;
+}
+.head img:last-child:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.head .title {
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  margin-left: 10px;
+}
+
+.text {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.body img {
+  width: 100%;
+}
+
+.bodytext {
+  color: #65676b;
+}
+
+.body button {
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.foot {
+  font-size: 0px;
+  display: flex;
+  border-top: 1px solid rgb(211, 211, 211);
+  justify-content: space-between;
+  padding-top: 20px;
+  height: 40px;
+}
+
+.foot .btnBox {
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.foot .btnBsox:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.foot .btnBox img {
+  height: 20px;
+  margin-right: 10px;
+}
+p {
+  font-size: 17px;
+}
