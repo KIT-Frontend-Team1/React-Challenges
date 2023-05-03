@@ -1,0 +1,11 @@
+- useState
+
+- useRef
+
+- useCallback
+
+- useMemo
+
+- React.memo
+
+- useEffect
