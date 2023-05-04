@@ -1,25 +1,58 @@
 - useState
-기본구조
-const [state, setState] = useState();
- 인자로 지정해서 리액트안에서 언제든지 편하게 사용할 수있는 변수이다
- 메모리를 많이 소모하는 작업을 할때는 바로 초기값에 바로 값을 넣는것이 아니라
- 콜백함수를 사용해서 한번만 사용하게 만들어준다.
- setState를 사용할때마다 다시 랜더링한다.
- state값이 변경될때 setState값이 이전 state값과 연관된다면 값을 바로 받는게아니라
- 콜백함수로 받는게 좋다.
+    기본구조
+    const [state, setState] = useState();
+    인자로 지정해서 리액트안에서 언제든지 편하게 사용할 수있는 변수이다
+    메모리를 많이 소모하는 작업을 할때는 바로 초기값에 바로 값을 넣는것이 아니라
+    콜백함수를 사용해서 한번만 사용하게 만들어준다.
+    setState를 사용할때마다 다시 랜더링한다.
+    state값이 변경될때 setState값이 이전 state값과 연관된다면 값을 바로 받는게아니라
+    콜백함수로 받는게 좋다.
 
 - useRef
-기본구조
-const ref = useRef(value)
-👎
-{ current:value }
+    기본구조
+    const ref = useRef(value)
+    👎
+    { current:value }
 
- Ref값은 유지가됨 렌더하기전까지 저장
+    원하는 특정 DOM을 직접 선택해서 컨트롤 할 수 있게 해주는 hook함수
+    Ref값은 유지가됨 렌더하기전까지 저장
 
 - useCallback
+    기본구조
+    useCallback(()=> {
+        return value;
+    }, [item])
+    item이 바뀌지 않으면 계속 콜백함수를 그대로 가지고 있는다.
+    item이 변경되면 그때 callback이 새로 실행된다
 
 - useMemo
+    기본구조
+    const value = useMemo(()=>{
+        return calculate();
+    }, [item])
+
+    자주 필요한 값을 메모리에 저장한 다음 계속 캐싱하여서 사용하는방법
 
 - React.memo
 
 - useEffect
+    기본구조
+    useEffect(()=> {
+        // 작업
+    })
+    렌더링 될때 마다 실행
+
+    useEffect(()=> {
+        // 작업
+    },[value])
+    화면에 첫 렌더링 될때 실행
+    value 값이 바뀔때 실행
+
+    useEffect(()=> {
+        // 작업
+    },[])
+    화면이 첫 렌더링 될때만 실행
+        
+        위에 처럼 배열을 작성안하면 렌더링 할때 마다 실행하고
+        배열에 빈배열을 넣으면 한번만 실행한다.
+        만약 배열에 값을 넣으면 값이 업데이트 할때마다 실행한다.
