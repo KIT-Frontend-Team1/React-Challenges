@@ -12,13 +12,16 @@ React: 프론트엔드 동료학습 리액트 플로우 레포지토리
 
 Team Member
 ===========
-<br>
 [오혜린](https://github.com/ooherin)
+<br>
 <br>
 [박세리](https://github.com/seripar)
 <br>
+<br>
 [김예슬](https://github.com/yesoryeseul)
 <br>
+<br>
 [고승용](https://github.com/seungyonggo)
+<br>
 <br>
 [심재원](https://github.com/GrayHound0801)
