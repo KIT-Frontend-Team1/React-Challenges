@@ -1,0 +1,83 @@
+3. useMemo
+- 리렌더링 사이에 계산 결과를 저장(캐싱)하는 React Hook이다. 여기서 Memo란 Memoization
+- 함수형 컴포넌트에서 값을 캐시하고 이전 값과 새 값을 비교하여 이전 값과 동일한 경우 캐싱된 이전 값을 반환하고, 그렇지 않은 경우 새 값을 계산하게 된다.
+- 즉, 동일 값을 리턴하는 함수를 반복적으로 호출해야하는 상황에서 유리하다. 처음 값을 계산할 때 해당 값을 메모리에 저장해서 필요할 때마다 매번 계산하지 않고 메모리에서 꺼내 재사용하는 것이다
+
+기본 형태는 이러하다
+const value = useMemo(() => {
+  return calcuate();
+}, [item])
+
+첫 번째 인자 > 콜백 함수, memoization해줄 값을 계산해서 리턴
+두 번째 인자 > 배열, 의존성 배열(dependency array)라고도 불림, useMemo는 배열 안의 요소 값이 업데이트 될 때만 콜백 함수를 재호출하여 memoization된 값을 업데이트하여 다시 memoization해준다.
+여기서 빈배열 []을 전달한다면 처음 컴포넌트가 마운트 되었을 때만 값을 계산하고 이후에는 항상 memoization된 값을 꺼내와 사용한다.
+
+
+useMemo의 장점?
+- 무거운 작업에서 효율적, 렌더링 성능 향상
+: 함수 기능이 무거운 작업이고 값이 자주 변경되지 않는 경우라면 useMemo로 계산 결과를 캐싱해놓고 불필요한 재연산 없이 필요할 때만 꺼내와 컴포넌트 렌더링 성능을 향상시킨다.
+
+- 가독성 향상
+: 코드에서 값을 캐싱하므로 코드가 명확하고 읽기 쉬워진다.
+
+ex)
+function Component({ data, activeId }) {
+  const activeItem = useMemo(() => {
+    return data.find((item) => item.id === activeId);
+  }, [data, activeId]);
+
+  return (
+    <div>
+      <h1>{activeItem.title}</h1>
+      <p>{activeItem.description}</p>
+    </div>
+  );
+}
+useMemo를 사용하여 data에서 activeItem을 찾을 때 data와 activeId 값이 변경될 때만 find 함수를 호출하고 그 결과를 캐시한다.
+data와 activeId가 변경될 때마다 find 함수를 호출하는 불필요한 작업을 방지하며 코드의 가독성을 향상시킨다.
+
+useMemo의 단점?
+- 무분별한 사용에서의 성능 하락
+: useMemo란 계산 값을 저장해 재활용하므로 메모리를 소비하여 따로 저장한다는 뜻이므로 불필요한 값까지 캐싱하면 오히려 성능에 안좋을 수 있다. useMemo는 계산 비용이 적은 값도 캐시하기 때문에 불필요한 캐시를 만들어 성능을 떨어뜨릴 수 있다.
+
+- 복잡성의 증가
+: useMemo를 사용하여 값을 캐시하면 오히려 코드가 복잡하게 보이고 이해하기 어려울 수 있다.
+
+
+ex)
+function Component({ data }) {
+  const sortedData = useMemo(() => {
+    if (data.length > 100) {
+      return data.sort();
+    } else {
+      return data;
+    }
+  }, [data]);
+
+  return (
+    <div>
+      {sortedData.map((item) => (
+        <div key={item}>{item}</div>
+      ))}
+    </div>
+  );
+}
+=> data의 길이가 100보다 큰 경우에만 sort()를 호출하도록 useMemo를 사용하는 예시.
+여기서 100보다 작은 data에서는 useMemo가 오히려 복잡도를 증가시키고 성능을 저하시킬 수 있다. 이럴 땐 useMemo보다는 조건문을 사용하여 단순하게 처리하는 것이 성능면에서 더 좋을 수 있다.
+
+조건문으로 변경한 코드)
+function Component({ data }) {
+  let sortedData = data;
+
+  if (data.length > 100) {
+    sortedData = data.sort();
+  }
+
+  return (
+    <div>
+      {sortedData.map((item) => (
+        <div key={item}>{item}</div>
+      ))}
+    </div>
+  );
+}
