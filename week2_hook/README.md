@@ -11,15 +11,16 @@
 5. hook - React.memo 장단점
 6. hook - useEffect 장단점
 
-## 4. 예시 구현 > 📁 src
+## 4. 예시 구현 > 🗂️ src
 
-📁 public
+🗂️ public
 
 data
 
 - members.json
 
-📁 hooks
+🗂️ hooks   
+
 Memo
 
 - index.js
