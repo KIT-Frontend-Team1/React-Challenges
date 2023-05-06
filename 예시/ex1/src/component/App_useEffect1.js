@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function App() {
+function Effect1() {
   const [count, setCount] = useState(1);
   const [name, setName] = useState("");
 
@@ -12,20 +12,20 @@ function App() {
     setName(e.target.value);
   };
 
-  //   // 랜더링 될때마다 매번 실행됨
-  //   useEffect(() => {
-  //     console.log("랜더링 🍕");
-  //   });
+  // // 랜더링 될때마다 매번 실행됨
+  // useEffect(() => {
+  //   console.log("랜더링 🍕");
+  // });
 
-  //   // 마운팅 + count가 변화할때마다 실행됨
-  //   useEffect(() => {
-  //     console.log("count 🍔");
-  //   }, [count]);
+  // // 마운팅 + count가 변화할때마다 실행됨
+  // useEffect(() => {
+  //   console.log("count 🍔");
+  // }, [count]);
 
-  //   // 마운팅 + name이 변경될때마다 실행됨
-  //   useEffect(() => {
-  //     console.log("name 🍟");
-  //   }, [name]);
+  // // 마운팅 + name이 변경될때마다 실행됨
+  // useEffect(() => {
+  //   console.log("name 🍟");
+  // }, [name]);
 
   useEffect(() => {
     console.log("마운팅 🌭");
@@ -40,4 +40,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default Effect1;

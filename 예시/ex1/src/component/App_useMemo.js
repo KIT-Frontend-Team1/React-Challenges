@@ -11,11 +11,11 @@ const easyCalculate = (number) => {
   return number + 1;
 };
 
-function App() {
+function Memo1() {
   const [hardNumber, setHardNumber] = useState(1);
   const [easyNumber, setEasyNumber] = useState(1);
 
-  //   const hardSum = hardCalculate(hardNumber);
+  // const hardSum = hardCalculate(hardNumber);
   const hardSum = useMemo(() => {
     return hardCalculate(hardNumber);
   }, [hardNumber]);
@@ -41,4 +41,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default Memo1;

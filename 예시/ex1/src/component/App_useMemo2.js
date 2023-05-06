@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-function App() {
+function Memo2() {
   const [number, setNumber] = useState(0);
   const [isKorea, setIsKorea] = useState(true);
 
@@ -34,4 +34,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default Memo2;

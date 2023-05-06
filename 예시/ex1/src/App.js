@@ -1,26 +1,34 @@
-import { useCallback, useMemo, useState } from "react";
-import Child from "./Child";
+import React from "react";
+import Callback1 from "./component/App_useCallback1";
+import Callback2 from "./component/App_useCallback2";
+import Context1 from "./component/App_usecontext";
+import Effect1 from "./component/App_useEffect1";
+import Effect2 from "./component/App_useEffect2";
+import Memo1 from "./component/App_useMemo";
+import Memo2 from "./component/App_useMemo2";
+import Ref1 from "./component/App_useRef";
+import State from "./component/App_useState";
 
 function App() {
-  const [parentAge, setParentAge] = useState(0);
-
-  const incrementParentAge = () => {
-    setParentAge(parentAge + 1);
-  };
-
-  console.log("👪부모 컴포넌트가 렌더링이 되었어요");
-
-  const tellMe = useCallback(() => {
-    console.log("길동아 사랑해 💕");
-  }, []);
-
   return (
-    <div style={{ border: "2px solid navy", padding: "10px" }}>
-      <h1>👪부모</h1>
-      <p>age: {parentAge}</p>
-      <button onClick={incrementParentAge}>부모 나이 증가</button>
-
-      <Child name={"홍길동"} tellMe={tellMe} />
+    <div>
+      <State />
+      <hr />
+      <Ref1 />
+      <hr />
+      <Callback1 />
+      <hr />
+      <Callback2 />
+      <hr />
+      <Memo1 />
+      <hr />
+      <Memo2 />
+      <hr />
+      <Effect1 />
+      <hr />
+      <Effect2 />
+      <hr />
+      <Context1 />
     </div>
   );
 }

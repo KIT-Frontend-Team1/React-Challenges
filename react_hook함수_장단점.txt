@@ -39,7 +39,7 @@
         return calculate();
     }, [item])
 
-    자주 필요한 값을 메모리에 저장한 다음 계속 캐싱하여서 사용하는방법
+    자주 필요한 값을 메모리에 저장한 다음 계속 저장하여서 사용하는방법
 
 
 - React.memo
@@ -69,3 +69,17 @@
         위에 처럼 배열을 작성안하면 렌더링 할때 마다 실행하고
         배열에 빈배열을 넣으면 한번만 실행한다.
         만약 배열에 값을 넣으면 값이 업데이트 할때마다 실행한다.
+
+- useContext
+    import { createContext } from "react";
+
+    export const ThemeContext = createContext("hello");
+
+    return(
+        <UserContext.Provider value={}>
+        </UserContext.Provider>
+    )
+    기본구조
+        context를 사용하면 컴포넌트를 재사용하기 어려워질 수 있다.
+        Props drilling을 피하기 위한 목적이라면 Component Composition (컴포넌트 합성)을 먼저 고려해보자
+            

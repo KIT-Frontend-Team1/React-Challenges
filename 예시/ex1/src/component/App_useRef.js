@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-function App() {
+function Ref1() {
   const inputRef = useRef();
 
   useEffect(() => {
@@ -20,4 +20,5 @@ function App() {
     </>
   );
 }
-export default App;
+
+export default Ref1;

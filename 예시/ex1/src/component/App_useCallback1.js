@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-function App() {
+function Callback1() {
   const [number, setNumber] = useState(0);
   const [toggle, setToggle] = useState(true);
 
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default Callback1;

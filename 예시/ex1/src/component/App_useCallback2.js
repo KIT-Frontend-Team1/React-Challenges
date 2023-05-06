@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
-import Box from "./Box";
+import Box from "../Box";
 
-function App() {
+function Callback2() {
   const [size, setSizes] = useState(100);
   const [isDark, setIsDark] = useState(false);
 
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Callback2;

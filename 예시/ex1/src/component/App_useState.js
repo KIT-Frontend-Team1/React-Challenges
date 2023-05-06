@@ -5,7 +5,7 @@ const heavyWork = () => {
   return ["홍길동", "김민수"];
 };
 
-function App() {
+function State() {
   const [names, setName] = useState(() => {
     return heavyWork();
   });
@@ -33,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default State;

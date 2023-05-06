@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Timer from "./component/Timer";
+import Timer from "./Timer";
 
-function App() {
+function Effect2() {
   const [showTimer, setShowTimer] = useState(false);
 
   return (
@@ -11,4 +11,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default Effect2;
